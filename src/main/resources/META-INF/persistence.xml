@@ -11,6 +11,8 @@
       <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
 
+
+
       <!-- 옵션 -->
       <!-- 쿼리가 출력 된다. -->
       <property name="hibernate.show_sql" value="true"/>
@@ -20,7 +22,7 @@
 
       <!-- 쿼리가 Member를 Insert한 것을 알려준다. -->
       <property name="hibernate.use_sql_comments" value="true"/>
-      <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
+      <property name="hibernate.hbm2ddl.auto" value="create" />
     </properties>
   </persistence-unit>
 </persistence>
