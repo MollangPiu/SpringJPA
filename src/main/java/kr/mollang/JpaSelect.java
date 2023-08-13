@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
  * Hello world!
  *
  */
-public class JpaSelect
+class JpaSelect
 {
     public static void main( String[] args )
     {

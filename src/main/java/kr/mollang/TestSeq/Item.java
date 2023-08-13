@@ -1,6 +1,6 @@
 package kr.mollang.TestSeq;
 
-public enum Item {
+enum Item {
 
     FOOD, BOX, LOOP
 }

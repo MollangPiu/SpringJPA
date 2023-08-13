@@ -1,2 +1,5 @@
-package kr.mollang.ManyToOne;public class ManyMember {
+package kr.mollang.ManyToOne;
+
+class ManyMember {
+
 }

@@ -10,7 +10,7 @@ import javax.persistence.Persistence;
  * Hello world!
  *
  */
-public class JpaInsertFor
+class JpaInsertFor
 {
     public static void main( String[] args )
     {

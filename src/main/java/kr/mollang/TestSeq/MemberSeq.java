@@ -15,7 +15,7 @@ import javax.persistence.SequenceGenerator;
     sequenceName = "MEMBER_SEQ",
     initialValue = 1, allocationSize = 1
 )
-public class MemberSeq {
+class MemberSeq {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,

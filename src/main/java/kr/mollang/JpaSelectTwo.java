@@ -10,7 +10,7 @@ import javax.persistence.Persistence;
  * Hello world!
  *
  */
-public class JpaSelectTwo
+class JpaSelectTwo
 {
     public static void main( String[] args )
     {
