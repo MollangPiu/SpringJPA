@@ -20,7 +20,19 @@ public class ManyStart {
 
         try {
 
+            Team team = new Team();
+            team.setId(1L);
+            team.setTeamName("Java 동호회");
 
+            em.persist(team);
+
+            Member member = new Member();
+            member.setName("Tiher");
+            member.setTeam(team);
+
+            em.persist(member);
+
+            tx.commit();
 
 
         }
