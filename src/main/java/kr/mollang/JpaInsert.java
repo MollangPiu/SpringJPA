@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
  * Hello world!
  *
  */
-public class JpaInsert
+class JpaInsert
 {
     public static void main( String[] args )
     {

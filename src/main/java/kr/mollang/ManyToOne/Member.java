@@ -1,12 +1,12 @@
-package kr.mollang.TestSeq;
+package kr.mollang.ManyToOne;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
@@ -15,18 +15,19 @@ import javax.persistence.SequenceGenerator;
     sequenceName = "MEMBER_SEQ",
     initialValue = 1, allocationSize = 1
 )
-class MemberSeq {
+class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-        generator = "MEMBER_SEQ_GENERATOR")
+    generator = "MEMBER_SEQ_GENERATOR")
     private Long id;
 
-    @Column(length = 30)
+    @Column(length = 40)
     private String name;
 
-    @Enumerated(EnumType.STRING)
-    private Item item;
+    @ManyToOne
+    @JoinColumn(name="TEAM_ID")
+    private Team team;
 
     public Long getId() {
         return id;
@@ -44,11 +45,11 @@ class MemberSeq {
         this.name = name;
     }
 
-    public Item getItem() {
-        return item;
+    public Team getTeam() {
+        return team;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
