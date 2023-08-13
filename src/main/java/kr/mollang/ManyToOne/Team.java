@@ -1,8 +1,11 @@
 package kr.mollang.ManyToOne;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 class Team {
@@ -11,6 +14,9 @@ class Team {
     @Column(name="TEAM_ID")
     private Long id;
     private String teamName;
+
+    @OneToMany(mappedBy = "team")
+    private List<Member> member = new ArrayList<Member>();
 
     public Long getId() {
         return id;
@@ -26,5 +32,13 @@ class Team {
 
     public void setTeamName(String teamName) {
         this.teamName = teamName;
+    }
+
+    public List<Member> getMember() {
+        return member;
+    }
+
+    public void setMember(List<Member> member) {
+        this.member = member;
     }
 }

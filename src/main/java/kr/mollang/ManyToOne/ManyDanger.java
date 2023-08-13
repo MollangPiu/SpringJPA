@@ -5,31 +5,29 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-class ManyStart {
+class ManyDanger {
 
     public static void main(String[] args) {
 
-        //Presistence.xml의 설정을 가져온다.
-        EntityManagerFactory emf =  Persistence.createEntityManagerFactory("hello");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();
         tx.begin();
 
-
-
         try {
 
             Team team = new Team();
-            team.setId(1L);
-            team.setTeamName("Java 동호회");
+            team.setTeamName("Python 강의");
+            team.setId(10L);
 
             em.persist(team);
 
-            Member member = new Member();
-            member.setName("Tiher");
-            member.setTeam(team);
 
+            Member member = new Member();
+            member.setName("Gang");
+            member.setTeam(team);
+            team.getMember().add(member);
             em.persist(member);
 
             tx.commit();
@@ -44,4 +42,5 @@ class ManyStart {
             em.close();
         }
     }
+
 }
