@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class ManyStart {
+class ManyStart {
 
     public static void main(String[] args) {
 
