@@ -27,12 +27,12 @@ class JpaStart {
             em.persist(movie);
 
 
-         /*   em.flush();
+            em.flush();
             em.clear();
 
             Movie findMovie = em.find(Movie.class, movie.getId());
-            System.out.println("findMove = "+findMovie);
-*/
+            System.out.println("findMove = " + findMovie);
+
             tx.commit();
 
         } catch (Exception e) {

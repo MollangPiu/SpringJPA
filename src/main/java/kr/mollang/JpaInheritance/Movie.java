@@ -1,9 +1,11 @@
 package kr.mollang.JpaInheritance;
 
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue("Mo")
 class Movie extends Item{
 
     private String director;
