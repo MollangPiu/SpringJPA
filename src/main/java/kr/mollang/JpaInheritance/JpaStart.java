@@ -19,14 +19,19 @@ class JpaStart {
         try {
 
             Movie movie = new Movie();
+            movie.setDirector("SGH");   //감독
+            movie.setActor("SSG");      //배우
+            movie.setName("바람행진곡");  //이름
+            movie.setPrice(10000);      //가격
 
+            em.persist(movie);
 
-        }
-        catch (Exception e) {
+            tx.commit();
+
+        } catch (Exception e) {
             e.printStackTrace();
             tx.rollback();
-        }
-        finally {
+        } finally {
             em.close();
         }
     }
