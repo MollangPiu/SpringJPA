@@ -24,7 +24,7 @@ class ManyDanger {
             em.persist(team);
 
 
-            Member member = new Member();
+            MemberTest member = new MemberTest();
             member.setName("Gang");
             member.setTeam(team);
             team.getMember().add(member);

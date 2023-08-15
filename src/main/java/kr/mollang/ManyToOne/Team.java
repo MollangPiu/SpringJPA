@@ -1,5 +1,6 @@
 package kr.mollang.ManyToOne;
 
+import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
@@ -16,7 +17,7 @@ class Team {
     private String teamName;
 
     @OneToMany(mappedBy = "team")
-    private List<Member> member = new ArrayList<Member>();
+    private List<MemberTest> member = new ArrayList<MemberTest>();
 
     public Long getId() {
         return id;
@@ -34,11 +35,11 @@ class Team {
         this.teamName = teamName;
     }
 
-    public List<Member> getMember() {
+    public List<MemberTest> getMember() {
         return member;
     }
 
-    public void setMember(List<Member> member) {
+    public void setMember(List<MemberTest> member) {
         this.member = member;
     }
 }

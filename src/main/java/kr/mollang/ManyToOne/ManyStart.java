@@ -26,7 +26,7 @@ class ManyStart {
 
             em.persist(team);
 
-            Member member = new Member();
+            MemberTest member = new MemberTest();
             member.setName("Tiher");
             member.setTeam(team);
 
